@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>MY DATA BASE</h1>
+        <table border="2px">
+            <thead>Topic</thead> 
+            <tr>
+                <th>topic name</th>
+            </tr>
+            
+            {% for i in to %}
+                <tr>
+                    <td>{{i.topic_name}}</td>
+                </tr>
+            {% endfor %}
+
+        </table>
+            <hr><hr><hr>
+
+        <table border="2px">
+            <thead>Webpage</thead>
+            <tr>
+                <th>pk/id</th>
+                <th>topic name</th>
+                <th>name</th>
+                <th>url</th>
+            </tr>
+
+            {% for j in wo %}
+            <tr>
+                <td>{{j.pk}}</td>
+                <td>{{j.topic_name}}</td>
+                <td>{{j.name}}</td>
+                <td>{{j.utl}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+            <hr><hr><hr>
+
+        <table border="2px">
+            <thead>Access Record</thead>
+            <tr>
+                <th>pk/id</th>
+                <th>name</th>
+                <th>author</th>
+                <th>date</th>
+            </tr>
+
+            {% for k in ao %}
+            <tr>
+                <td>{{k.pk}}</td>
+                <td> {{k.name}} </td>
+                <td> {{k.author}} </td>
+                <td> {{k.date}} </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </center>
+</body>
+</html>
