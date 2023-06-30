@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>update_topic</title>
+</head>
+<body>
+    <center>
+        <h1>UPDATE TOPIC</h1>
+        <form method="post">
+            {% csrf_token %}
+            <table>
+                <tr>
+                    <td><label for="sto">select topic</label></td>
+                    <td><input type="text" name="topic" id="sto"></td>
+                </tr>
+                <tr>
+                    <td><label for="uto">update to(new)</label></td>
+                    <td><input type="text" name="newtopic" id="uto" placeholder="unused topic name"></td>
+                </tr>
+            </table>
+                <input type="submit" value="submit">
+        </form>
+    </center>
+</body>
+</html>
